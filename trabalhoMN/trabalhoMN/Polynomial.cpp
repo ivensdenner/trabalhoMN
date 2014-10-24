@@ -63,4 +63,5 @@ float Polynomial::derivative(float x)
 {
 	// XXX A função abaixo é temporária!! A definitia é a do Esdras!
 	return ((4 * coefficients[4] * powf(x, 3)) + (3 * coefficients[3] * powf(x, 2)) + (2 * coefficients[2] * x) + coefficients[1]);
+	//return ((3 * coefficients[3] * powf(x, 2)) + (2 * coefficients[2] * x) + coefficients[1]);
 }

@@ -18,9 +18,18 @@
     <ClInclude Include="Polynomial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="NumericMethods.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Polynomial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NumericMethods.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

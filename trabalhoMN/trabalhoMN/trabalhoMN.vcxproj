@@ -64,9 +64,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="NumericMethods.h" />
     <ClInclude Include="Polynomial.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="MainTest.cpp" />
+    <ClCompile Include="NumericMethods.cpp" />
     <ClCompile Include="Polynomial.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
