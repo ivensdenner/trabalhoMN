@@ -3,25 +3,25 @@
 #include <iostream>
 
 
-float newtonRaphson(Polynomial *polynomial, float x0, float error1, float error2, int maxInter)
+double newtonRaphson(Polynomial *polynomial, double x0, double error1, double error2, int maxInter)
 {
-	float x1;
-	float root;
+	double x1;
+	double root;
 	bool rootFound = false;
 	int k;
 
-	if (fabsf(polynomial->getResult(x0)) < error1)
+	if (fabs(polynomial->funcao(x0)) < error1)
 	{
 		root = x0;
-		rootFound - true;
+		rootFound = true;
 	}
 	
 	k = 1;
 	while (!rootFound)
 	{
-		x1 = x0 - (polynomial->getResult(x0) / polynomial->derivative(x0));
-		std::cout << k << "\t" << x1 << "\t" << polynomial->getResult(x1) << std::endl;
-		if (fabsf(polynomial->getResult(x1)) < error1 || fabsf(x1 - x0) < error2 || k >= maxInter)
+		x1 = x0 - (polynomial->funcao(x0) / polynomial->derivadaNumerica(x0));
+		std::cout << k << "\t" << x1 << "\t" << polynomial->funcao(x1) << std::endl;
+		if (fabs(polynomial->funcao(x1)) < error1 || fabs(x1 - x0) < error2 || k >= maxInter)
 		{
 			root = x1;
 			rootFound = true;

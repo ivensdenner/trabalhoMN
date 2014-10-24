@@ -3,6 +3,6 @@
 
 #include "Polynomial.h"
 
-float newtonRaphson(Polynomial *polynomial, float x0, float error1, float error2, int maxInter);
+double newtonRaphson(Polynomial *polynomial, double x0, double error1, double error2, int maxInter);
 
 #endif // NUMERIC_METHODS

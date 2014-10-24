@@ -5,7 +5,7 @@
 Polynomial::Polynomial(int _degree)
 {
 	degree = _degree;
-	coefficients = new float[degree + 1];
+	coefficients = new double[degree + 1];
 
 	for (int i = 0; i <= degree; i++)
 	{
@@ -26,13 +26,13 @@ int Polynomial::getDegree()
 }
 
 
-float * Polynomial::getCoefficients()
+double * Polynomial::getCoefficients()
 {
 	return coefficients;
 }
 
 
-float Polynomial::getCoefficient(int index)
+double Polynomial::getCoefficient(int index)
 {
 	if (index <= degree && index >= 0)
 		return coefficients[index];
@@ -41,27 +41,40 @@ float Polynomial::getCoefficient(int index)
 }
 
 
-void Polynomial::setCoefficient(float value, int index)
+void Polynomial::setCoefficient(double value, int index)
 {
 	if (index <= degree && index >= 0)
 		coefficients[index] = value;
 }
 
 
-float Polynomial::getResult(float x)
+double Polynomial::funcao(double x)
 {
-	float result = 0;
+	double fdex = 0;
 
 	for (int i = 0; i <= degree; i++)
-		result += coefficients[i] * powf(x, i);
+		fdex += coefficients[i] * pow(x, i);
 
-	return result;
+	return fdex;
 }
 
 
-float Polynomial::derivative(float x)
+double* Polynomial::derivadaSimbolica()
 {
-	// XXX A função abaixo é temporária!! A definitia é a do Esdras!
-	return ((4 * coefficients[4] * powf(x, 3)) + (3 * coefficients[3] * powf(x, 2)) + (2 * coefficients[2] * x) + coefficients[1]);
-	//return ((3 * coefficients[3] * powf(x, 2)) + (2 * coefficients[2] * x) + coefficients[1]);
+	double *der = new double[degree - 1];
+
+	for (int i = 1; i <= degree; i++)
+		der[i - 1] = i * coefficients[i];
+
+	return der;
+}
+
+
+double Polynomial::derivadaNumerica(double x)
+{
+	double h = pow(2.0, -20.0);
+
+	double der = (funcao(x + h) - funcao(x)) / h;
+
+	return der;
 }

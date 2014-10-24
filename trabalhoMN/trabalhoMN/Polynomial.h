@@ -9,15 +9,16 @@ public:
 	virtual ~Polynomial();
 
 	int getDegree();
-	float * getCoefficients();
-	float getCoefficient(int index);
-	void setCoefficient(float value, int index);
-	float getResult(float x);
-	float derivative(float x); // Função do Esdras
+	double * getCoefficients();
+	double getCoefficient(int index);
+	void setCoefficient(double value, int index);
+	double funcao(double x);
+	double* derivadaSimbolica();
+	double derivadaNumerica(double x);
 
 private:
 	int degree;
-	float *coefficients;
+	double *coefficients;
 };
 
 #endif // POLYNOMIAL_H
