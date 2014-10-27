@@ -6,6 +6,7 @@ class Polynomial
 {
 public:
 	Polynomial(int _degree);
+	Polynomial(int _degree, double _coefficients[]);
 	virtual ~Polynomial();
 
 	int getDegree();
@@ -13,7 +14,7 @@ public:
 	double getCoefficient(int index);
 	void setCoefficient(double value, int index);
 	double funcao(double x);
-	double* derivadaSimbolica();
+	double * derivadaSimbolica();
 	double derivadaNumerica(double x);
 
 private:

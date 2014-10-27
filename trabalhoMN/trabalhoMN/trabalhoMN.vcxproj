@@ -64,11 +64,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Bridge.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="NumericMethods.h" />
     <ClInclude Include="Polynomial.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bridge.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="MainTest.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="NumericMethods.cpp" />
     <ClCompile Include="Polynomial.cpp" />
   </ItemGroup>

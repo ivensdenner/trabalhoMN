@@ -14,9 +14,21 @@ Polynomial::Polynomial(int _degree)
 }
 
 
+Polynomial::Polynomial(int _degree, double _coefficients[])
+{
+	degree = _degree;
+	coefficients = new double[degree + 1];
+
+	for (int i = 0; i <= degree; i++)
+	{
+		coefficients[i] = _coefficients[i];
+	}
+}
+
+
 Polynomial::~Polynomial()
 {
-	delete coefficients;
+//	delete[] coefficients;
 }
 
 
