@@ -64,7 +64,7 @@ double newton_pol(Polynomial *polynomial, double x, double e1, int itermax)
 
 		b = polynomial->getCoefficient(0) + b*x; //ela considera a[4] já sendo o ultima posição do vetor
 
-		if (abs(b) < e1){
+		if (fabs(b) < e1){
 			raiz = x;
 			std::cout << "atingiu o erro" << std::endl;//linha só pra controle de erro, pode ser retirada
 			return raiz;
@@ -75,7 +75,7 @@ double newton_pol(Polynomial *polynomial, double x, double e1, int itermax)
 		x = x - deltax;
 		std::cout << (k + 1) << "\t" << x << "\t" << polynomial->funcao(x) << std::endl;
 
-		if (abs(deltax) < e1){
+		if (fabs(deltax) < e1){
 			raiz = x;
 			return raiz;
 		}
