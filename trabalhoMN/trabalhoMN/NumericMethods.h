@@ -3,6 +3,7 @@
 
 #include "Polynomial.h"
 
+double isolamento(Polynomial *polynomial);
 double newton_raphson(Polynomial *polynomial, double x0, double error1, double error2, int maxInter);
 double newton_pol(Polynomial *polynomial, double x, double e1, int itermax);
 

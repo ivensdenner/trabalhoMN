@@ -3,6 +3,16 @@
 #include <iostream>
 
 
+double isolamento(Polynomial *polynomial)
+{
+	double x0 = 0;
+	while ((polynomial->funcao(x0))>1)
+		x0 = x0 + 0.1;
+
+	return x0;
+}
+
+
 double newton_raphson(Polynomial *polynomial, double x0, double error1, double error2, int maxInter)
 {
 	double x1;
