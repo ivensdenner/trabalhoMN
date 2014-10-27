@@ -35,9 +35,6 @@
     <ClCompile Include="NumericMethods.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MainTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

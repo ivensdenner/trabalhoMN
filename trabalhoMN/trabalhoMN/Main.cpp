@@ -27,7 +27,12 @@ int main()
 					menu.set_guess(isolamento(polynomial));
 				}
 
-				std::cout << "Opcao " << (i + 1) << std::endl;
+				std::cout << "------------------------------------------------------------------" << std::endl;
+				std::cout << "Opcao " << (i + 1) <<": b4=" << polynomial->getCoefficient(4)
+					<< ", b3=" << polynomial->getCoefficient(3)
+					<< ", b2=" << polynomial->getCoefficient(2)
+					<< ", b1=" << polynomial->getCoefficient(1)
+					<< ", b0=" << polynomial->getCoefficient(0) << std::endl;
 				std::cout << "Calculando valor de c utilizando Newton Original..." << std::endl;
 				c1 = bridge->calculate_lenght(NEWTON_RAPHSON, menu.get_guess(), menu.get_error1(), menu.get_error2(), menu.get_max_iter());
 				std::cout << "c = " << c1 << " metros." << std::endl << std::endl;
